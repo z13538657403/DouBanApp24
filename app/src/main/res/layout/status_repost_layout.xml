@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="3dp"
+        android:layout_marginRight="5dp"
+        android:layout_marginLeft="10dp">
+
+        <com.facebook.drawee.view.SimpleDraweeView
+            android:id="@+id/repost_user_icon"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            app:roundedCornerRadius="2dp"
+            android:layout_centerVertical="true"
+            android:layout_alignParentLeft="true"/>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="6dp"
+            android:layout_toRightOf="@+id/repost_user_icon"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/repost_user_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="4dp"
+                android:textSize="16sp"
+                android:textColor="@color/result_view"
+                android:text="Hello World"/>
+
+            <TextView
+                android:id="@+id/repost_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="12sp"
+                android:textColor="@color/darkgrey"
+                android:text="Hello World"/>
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/repost_status_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="4dp"
+        android:layout_marginLeft="56dp"
+        android:layout_marginRight="5dp"
+        android:textSize="15sp"
+        android:textColor="@color/defaultTextColor"
+        android:text="Hello World Hello World Hello World Hello World Hello World"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_height="1dp"
+        android:background="@color/darkgrey"/>
+
+</LinearLayout>

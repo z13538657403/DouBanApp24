@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/my_viewPager"
+        android:layout_width="match_parent"
+        android:layout_height="450dp" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="5dp"
+        android:paddingTop="5dp"
+        android:background="@color/mediumseagreen">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/playing_dot"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/dot_green"
+                android:layout_marginRight="8dp"/>
+
+            <ImageView
+                android:id="@+id/list_dot"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/dot_white"/>
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/mediumseagreen"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/play_song_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:textSize="16sp"
+            android:lineSpacingExtra="5dp"
+            android:singleLine="true"
+            android:textColor="@color/black"
+            android:text="@string/empty_string"
+            android:layout_marginTop="4dp"
+            android:layout_marginBottom="4dp"/>
+
+        <SeekBar
+            android:id="@+id/playing_seekBar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:maxHeight="3dp"
+            android:thumbTintMode="src_in"
+            android:max="100"
+            android:progressDrawable="@drawable/pro_seekbar"
+            android:progress="0"/>
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingRight="15dp"
+        android:paddingLeft="15dp"
+        android:background="@color/mediumseagreen">
+
+        <ImageView
+            android:id="@+id/my_favorite_song"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:src="@mipmap/ic_favorite_music"/>
+
+        <LinearLayout
+            android:layout_centerInParent="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/playing_before_song"
+                android:layout_gravity="center_vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/icon_big_before"/>
+
+            <ImageView
+                android:id="@+id/start_and_pause"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/start_btn"/>
+
+            <ImageView
+                android:id="@+id/playing_next_song"
+                android:layout_gravity="center_vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/icon_big_next"/>
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/play_time_remain"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="14sp"
+            android:textColor="@color/black"
+            android:text="@string/empty_string"/>
+
+    </RelativeLayout>
+
+</LinearLayout>

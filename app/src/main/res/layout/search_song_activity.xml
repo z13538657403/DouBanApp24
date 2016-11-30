@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    android:orientation="vertical">
+
+    <com.test.zhangtao.activitytest.widget.DBToolBar
+        android:id="@+id/search_song_toolBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:leftButtonText="取消"
+        app:isShowTabLayout="false"
+        app:title="搜索歌曲"
+        app:popupTheme="@style/Theme.AppCompat.Light"
+        android:background="?attr/colorPrimary"
+        android:minHeight="?attr/actionBarSize"/>
+
+    <android.support.v7.widget.SearchView
+        android:id="@+id/search_song_view"
+        android:layout_width="match_parent"
+        android:layout_height="42dp"
+        android:layout_marginBottom="4dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginTop="8dp"
+        android:background="#C0C0C0"
+        android:focusable="false"
+        android:focusableInTouchMode="false"
+        android:textColor="@color/black"
+        app:iconifiedByDefault="false"
+        app:queryBackground="@null"
+        app:queryHint="请输入歌曲名或歌手名"/>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <fragment
+            android:id="@+id/song_result_fragment"
+            class="com.test.zhangtao.activitytest.activity.SearchSongFragment"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/hot_search_layout"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="15sp"
+                android:paddingBottom="6dp"
+                android:paddingLeft="5dp"
+                android:textColor="@color/grey"
+                android:text="热门搜索"/>
+
+            <com.zhy.view.flowlayout.TagFlowLayout
+                android:id="@+id/flow_layout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:auto_select_effect="false"
+                app:max_select="1" />
+
+        </LinearLayout>
+
+    </FrameLayout>
+
+</LinearLayout>

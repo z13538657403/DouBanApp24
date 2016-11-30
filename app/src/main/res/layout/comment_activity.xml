@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <com.test.zhangtao.activitytest.widget.DBToolBar
+        android:id="@+id/comment_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:leftButtonIcon="@mipmap/back"
+        app:isShowTabLayout="false"
+        app:title="电影评论"
+        app:popupTheme="@style/Theme.AppCompat.Light"
+        android:background="?attr/colorPrimary"
+        android:minHeight="?attr/actionBarSize"/>
+
+        <com.yyydjk.library.DropDownMenu
+            android:id="@+id/dropdownMenu"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:ddmenuTextSize="16sp"
+            app:ddtextSelectedColor="@color/result_view"
+            app:ddtextUnselectedColor="@color/result_view"
+            app:dddividerColor="@android:color/transparent"
+            app:ddunderlineColor="@android:color/darker_gray"
+            app:ddmenuSelectedIcon="@drawable/up_arrow"
+            app:ddmenuUnselectedIcon="@drawable/down_arrow"
+            app:ddmaskColor="@color/half_transparent"
+            app:ddmenuBackgroundColor="@color/white"/>
+
+</LinearLayout>

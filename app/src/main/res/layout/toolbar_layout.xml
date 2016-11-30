@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <Button
+        android:id="@+id/tool_leftButton"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:layout_marginLeft="3dp"
+        android:layout_alignParentLeft="true"
+        android:textSize="15sp"
+        android:layout_centerVertical="true"
+        style="@android:style/Widget.Material.Toolbar.Button.Navigation"/>
+
+    <com.flyco.tablayout.SegmentTabLayout
+        android:id="@+id/segment_tabLayout"
+        android:layout_width="240dp"
+        android:layout_height="45dp"
+        android:layout_centerVertical="true"
+        android:layout_centerInParent="true"
+        android:gravity="center"
+        android:visibility="gone"
+        app:tl_indicator_anim_enable="true"
+        app:tl_indicator_bounce_enable="false"
+        app:tl_indicator_corner_radius="8dp"
+        app:tl_bar_color="@color/mediumaquamarine"
+        app:tl_indicator_color="#5bb899"
+        app:tl_textsize="16dp"
+        app:tl_textBold="true"
+        app:tl_indicator_margin_bottom="2dp"
+        app:tl_indicator_margin_left="2dp"
+        app:tl_indicator_margin_right="2dp"
+        app:tl_indicator_margin_top="2dp"
+        app:tl_tab_space_equal="true">
+    </com.flyco.tablayout.SegmentTabLayout>
+
+    <TextView
+        android:id="@+id/toolbar_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        android:visibility="gone"/>
+
+    <Button
+        android:id="@+id/tool_rightButton"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:layout_marginRight="3dp"
+        android:layout_alignParentRight="true"
+        android:textSize="15sp"
+        android:layout_centerVertical="true"
+        style="@android:style/Widget.Material.Toolbar.Button.Navigation"/>
+
+</RelativeLayout>

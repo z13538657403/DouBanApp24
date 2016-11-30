@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="DNToolBar">
+        <attr name="rightButtonIcon" format="reference"/>
+        <attr name="leftButtonIcon" format="reference"/>
+        <attr name="rightButtonText" format="string"/>
+        <attr name="leftButtonText" format="string"/>
+        <attr name="isShowTabLayout" format="boolean"/>
+    </declare-styleable>
+</resources>

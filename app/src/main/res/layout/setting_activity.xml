@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <com.test.zhangtao.activitytest.widget.DBToolBar
+        android:id="@+id/user_setting_toolBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:leftButtonIcon="@mipmap/back"
+        app:isShowTabLayout="false"
+        app:title="设置"
+        app:popupTheme="@style/Theme.AppCompat.Light"
+        android:background="?attr/colorPrimary"
+        android:minHeight="?attr/actionBarSize"/>
+
+    <Button
+        android:id="@+id/check_new_version"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        android:text="@string/checkNewVersion"
+        android:background="@color/white"/>
+
+    <Button
+        android:id="@+id/about_the_app"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        android:text="@string/aboutApp"
+        android:background="@color/white"/>
+
+    <Button
+        android:id="@+id/login_out_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        android:text="@string/unLogin"
+        android:background="@color/white"/>
+
+</LinearLayout>

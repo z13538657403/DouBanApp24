@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <com.test.zhangtao.activitytest.widget.DBToolBar
+        android:id="@+id/user_info_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:leftButtonIcon="@mipmap/back"
+        app:isShowTabLayout="false"
+        app:title="个人信息"
+        app:popupTheme="@style/Theme.AppCompat.Light"
+        android:background="?attr/colorPrimary"
+        android:minHeight="?attr/actionBarSize"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_marginTop="5dp"
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:layout_height="wrap_content">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:padding="5dp">
+
+                <com.facebook.drawee.view.SimpleDraweeView
+                    android:id="@+id/user_head_icon"
+                    android:layout_width="@dimen/avatar_size_x"
+                    android:layout_height="@dimen/avatar_size_x"
+                    app:roundedCornerRadius="2dp"
+                    android:layout_alignParentLeft="true"
+                    android:src="@drawable/ic_place_holder"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="6dp"
+                    android:layout_toRightOf="@+id/user_head_icon">
+
+                    <TextView
+                        android:id="@+id/current_user_name"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textSize="17sp"
+                        android:text="null"
+                        android:lineSpacingExtra="4dp"
+                        android:textColor="@color/black"/>
+
+                    <TextView
+                        android:id="@+id/current_user_detail"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textSize="13sp"
+                        android:layout_marginTop="7dp"
+                        android:lineSpacingExtra="4dp"
+                        android:singleLine="true"
+                        android:textColor="@color/defaultTextColor"
+                        android:text="null" />
+
+                </LinearLayout>
+
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/height_divider"
+                android:layout_marginLeft="@dimen/space_xs"
+                android:layout_marginRight="@dimen/space_xs"
+                android:background="@color/bg_color"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="5dp"
+                android:background="@color/white"
+                android:layout_marginBottom="5dp">
+
+                <TextView
+                    android:id="@+id/user_blog_count"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:paddingTop="4dp"
+                    android:paddingBottom="4dp"
+                    android:textColor="@color/black"
+                    android:textSize="14sp"
+                    android:gravity="center"
+                    android:text="@string/empty_num"/>
+
+                <View
+                    android:layout_width="@dimen/height_divider"
+                    android:layout_height="match_parent"
+                    android:background="@color/bg_color"/>
+
+                <TextView
+                    android:id="@+id/user_focus_count"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:textColor="@color/black"
+                    android:paddingTop="4dp"
+                    android:paddingBottom="4dp"
+                    android:textSize="14sp"
+                    android:gravity="center"
+                    android:text="@string/empty_num"/>
+
+                <View
+                    android:layout_width="@dimen/height_divider"
+                    android:layout_height="match_parent"
+                    android:background="@color/bg_color"/>
+
+                <TextView
+                    android:id="@+id/user_friend_count"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:textColor="@color/black"
+                    android:paddingTop="4dp"
+                    android:paddingBottom="4dp"
+                    android:textSize="14sp"
+                    android:gravity="center"
+                    android:text="@string/empty_num"/>
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="6dp"
+                android:textColor="@color/black"
+                android:textSize="17sp"
+                android:lineSpacingExtra="4dp"
+                android:background="@color/white"
+                android:text="@string/new_status"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/height_divider"
+                android:layout_marginLeft="@dimen/space_xs"
+                android:layout_marginRight="@dimen/space_xs"
+                android:background="@color/bg_color"/>
+
+            <include layout="@layout/new_status_layout"/>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>

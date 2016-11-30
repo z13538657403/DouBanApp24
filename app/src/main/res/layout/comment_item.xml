@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="3dp">
+
+        <com.facebook.drawee.view.SimpleDraweeView
+            android:id="@+id/user_image"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginLeft="4dp"
+            app:roundedCornerRadius="2dp"
+            android:layout_centerVertical="true"
+            android:layout_alignParentLeft="true"/>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="6dp"
+            android:layout_toRightOf="@+id/user_image"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/user_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="4dp"
+                android:textSize="16sp"
+                android:textColor="@color/result_view"
+                android:text="Hello World"/>
+
+            <TextView
+                android:id="@+id/publish_date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="12sp"
+                android:textColor="@color/darkgrey"
+                android:text="Hello World"/>
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/comment_count"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:textSize="12sp"
+            android:textColor="@color/darkgrey"
+            android:layout_alignParentRight="true"
+            android:text="Hello World"/>
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/comment_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:textSize="15sp"
+        android:textColor="@color/defaultTextColor"
+        android:text="Hello World Hello World Hello World Hello World Hello World"/>
+
+</LinearLayout>

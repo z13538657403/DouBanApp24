@@ -1,0 +1,58 @@
+<resources>
+    <string name="app_name_test">青听</string>
+    <string name="hotComment">热门评论</string>
+    <string name="recentComment">最近评论</string>
+    <string name="comment_type">排序:</string>
+    <string name="base_hot">按热度</string>
+    <string name="base_time">按时间</string>
+
+    <string name="action_settings">Settings</string>
+    <string name="second_activity">第二个 activity</string>
+    <string name="button">Button</string>
+    <string name="title_first">First</string>
+    <string name="title_sub_first">Sub</string>
+    <string name="empty_string">null</string>
+    <string name="empty_num">0</string>
+    <string name="recommend">推荐</string>
+    <string name="newest">最新</string>
+    <string name="lbl_home">首页</string>
+    <string name="lbl_message">信息</string>
+    <string name="lbl_profile">我的</string>
+    <string name="lbl_landing">菜鸟窝</string>
+    <string name="lbl_demo">测试</string>
+    <string name="hint_please_input_content">请输入文本内容</string>
+    <string name="lbl_post">发送</string>
+    <string name="lbl_repost">转发微博</string>
+    <string name="lbl_comment">评论微博</string>
+    <string name="at_me">\@我的</string>
+    <string name="lbl_subscription">订阅信息</string>
+    <string name="lbl_like">赞</string>
+    <string name="lbl_my_weibo">我的微博</string>
+    <string name="lbl_my_attention">我的关注</string>
+    <string name="lbl_my_fans">我的粉丝</string>
+    <string name="lbl_fav">我的收藏</string>
+    <string name="lbl_logout">退出登录</string>
+    <string name="write_something">写评论…</string>
+    <string name="write_status">分享新鲜事…</string>
+    <string name="write_app_comment">请输入您使用中的问题或建议…</string>
+    <string name="repost_status">说说分享心得…</string>
+    <string name="boolBar_title_comment">发评论</string>
+    <string name="boolBar_title_rePost">转发微博</string>
+    <string name="boolBar_title_status">发微博</string>
+    <string name="app_title_comment">意见反馈</string>
+    <string name="at_someOne"></string>
+    <string name="moreSong">更多歌曲</string>
+    <string name="rollSong">摇滚精选</string>
+    <string name="folksong">民谣精选</string>
+    <string name="albumOf">陈壁专辑</string>
+    <string name="new_status">最新微博</string>
+    <string name="unLogin">退出登录</string>
+    <string name="checkNewVersion">检查新版本</string>
+    <string name="aboutApp">关于本应用</string>
+    <string name="app_introduction">青听1.0简介</string>
+    <string name="app_detail">1. 该应用需要使用微博账号登录，部分实现了微博的功能，如查看微博，个人微博信息，发微博，评论以及转发等；\n\n
+    2. 可以查看250部经典电影的简介以及对电影的评论； \n\n
+    3. 该应用调用QQ音乐的API接口，内置大量热门音乐，当然您也可以自己搜索自己喜欢的音乐，点击主页面左下角的播放图片，可以进入播放页面；\n\n
+    4. 主页面集成了一个右滑菜单，在主界面手指向右滑动，即可打开右滑菜单；\n\n
+    5. 由于个人水平有限，应用难免有一些Bug，欢迎您提出意见，最后祝您使用愉快！！！</string>
+</resources>

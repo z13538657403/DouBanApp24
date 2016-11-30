@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <com.test.zhangtao.activitytest.widget.DBToolBar
+        android:id="@+id/blog_creating_toolBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:leftButtonText="取消"
+        app:rightButtonText="发送"
+        app:isShowTabLayout="false"
+        app:title="@string/boolBar_title_status"
+        app:popupTheme="@style/Theme.AppCompat.Light"
+        android:background="?attr/colorPrimary"
+        android:minHeight="?attr/actionBarSize"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+
+            <EditText
+                android:id="@+id/blog_create_status"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:minHeight="160dp"
+                android:hint="@string/write_status"
+                android:gravity="top"
+                android:padding="@dimen/space_s"
+                android:textSize="15sp"
+                android:textColor="@color/black"
+                android:lineSpacingExtra="4dp"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/cw_bg"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/space_s"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/add_photo"
+                    android:padding="@dimen/space_s"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="@dimen/space_s"
+                    android:layout_gravity="center_vertical"
+                    android:src="@drawable/ic_choose_pic"/>
+
+                <ImageView
+                    android:id="@+id/at_someOne"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="@dimen/space_xxl"
+                    android:src="@drawable/ic_mail"/>
+
+                <ImageView
+                    android:id="@+id/show_face_selector"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/space_xxl"
+                    android:layout_gravity="center_vertical"
+                    android:src="@drawable/ic_face"/>
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/cw_bg"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:padding="@dimen/space_s"
+                android:background="@color/white">
+
+                <FrameLayout
+                    android:id="@+id/Container"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="8dp"/>
+
+                <cn.finalteam.galleryfinal.widget.HorizontalListView
+                    android:id="@+id/lv_photo"
+                    android:layout_width="match_parent"
+                    android:layout_height="110dp"
+                    android:cacheColorHint="@android:color/transparent"
+                    android:clipToPadding="false"
+                    android:fadingEdge="none"
+                    android:horizontalSpacing="1dp"
+                    app:dividerWidth="5dp"
+                    android:verticalSpacing="2dp"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>

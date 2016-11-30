@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:pi="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/selector_list_item"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="@dimen/space_s">
+
+        <com.facebook.drawee.view.SimpleDraweeView
+            android:id="@+id/ivHeader"
+            android:layout_width="@dimen/avatar_size"
+            android:layout_height="@dimen/avatar_size"
+            pi:roundedCornerRadius="5dp"
+            android:src="@drawable/ic_place_holder"/>
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="8dip"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tvUserName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="17sp"
+                android:text="null"
+                android:lineSpacingExtra="4dp"
+                android:textColor="@color/black"/>
+
+            <TextView
+                android:id="@+id/tvTime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tvUserName"
+                android:textSize="12sp"
+                android:lineSpacingExtra="4dp"
+                android:textColor="@color/defaultTextColor"
+                android:text="null" />
+
+            <TextView
+                android:id="@+id/tvSource"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tvUserName"
+                android:layout_marginLeft="@dimen/space_m"
+                android:layout_toRightOf="@+id/tvTime"
+                android:textSize="12sp"
+                android:lineSpacingExtra="4dp"
+                android:textColor="@color/defaultTextColor"
+                android:text="@string/empty_string"/>
+
+            <ImageView
+                android:id="@+id/ivOperator"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:src="@drawable/ic_arrow_down"
+                android:layout_marginTop="3dp"/>
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tvContent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="@dimen/space_s"
+        android:paddingRight="@dimen/space_s"
+        android:paddingBottom="@dimen/space_s"
+        android:paddingTop="1dip"
+        android:singleLine="false"
+        android:textSize="14sp"
+        android:lineSpacingExtra="4dp"
+        android:textColor="@color/defaultTextColor"
+        android:text="@string/empty_string"/>
+
+    <com.facebook.drawee.view.SimpleDraweeView
+        android:id="@+id/ivContent"
+        android:layout_marginLeft="8dp"
+        android:layout_marginBottom="8dp"
+        android:layout_width="@dimen/avatar_size_xxl"
+        android:layout_height="@dimen/avatar_size_xxl"
+        android:scaleType="centerCrop"
+        android:src="@drawable/ic_place_holder" />
+
+    <LinearLayout
+        android:id="@+id/llRe"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/cw_bg"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tvReContent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/space_s"
+            android:singleLine="false"
+            android:textSize="14sp"
+            android:lineSpacingExtra="4dp"
+            android:textColor="@color/defaultTextColor"
+            android:text="@string/empty_string"/>
+
+        <com.facebook.drawee.view.SimpleDraweeView
+            android:id="@+id/ivReContent"
+            android:layout_width="@dimen/avatar_size_xxl"
+            android:layout_height="@dimen/avatar_size_xxl"
+            android:layout_marginLeft="8dp"
+            android:layout_marginBottom="8dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/ic_place_holder"/>
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/height_divider"
+        android:layout_marginLeft="@dimen/space_xs"
+        android:layout_marginRight="@dimen/space_xs"
+        android:background="@color/bg_color"/>
+
+    <LinearLayout
+        android:id="@+id/llBottom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="@dimen/space_xs">
+
+        <com.test.zhangtao.activitytest.widget.DrawCenterTextView
+            android:drawablePadding="@dimen/space_xs"
+            android:id="@+id/tvRetweet"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@color/cw_white"
+            android:drawableLeft="@drawable/ic_retweet"
+            android:text="@string/empty_num"/>
+
+        <View
+            android:layout_marginLeft="@dimen/space_s"
+            android:layout_marginRight="@dimen/space_s"
+            android:layout_width="@dimen/height_divider"
+            android:layout_height="match_parent"
+            android:background="@color/bg_color"/>
+
+        <com.test.zhangtao.activitytest.widget.DrawCenterTextView
+            android:drawablePadding="@dimen/space_xs"
+            android:id="@+id/tvComment"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@color/cw_white"
+            android:drawableLeft="@drawable/ic_comment"
+            android:text="@string/empty_num"/>
+
+        <View
+            android:layout_marginLeft="@dimen/space_s"
+            android:layout_marginRight="@dimen/space_s"
+            android:layout_width="@dimen/height_divider"
+            android:layout_height="match_parent"
+            android:background="@color/bg_color"/>
+
+        <com.test.zhangtao.activitytest.widget.DrawCenterTextView
+            android:drawablePadding="@dimen/space_xs"
+            android:id="@+id/tvLike"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@color/cw_white"
+            android:drawableLeft="@drawable/ic_like"
+            android:text="@string/empty_num"/>
+
+    </LinearLayout>
+
+</LinearLayout>

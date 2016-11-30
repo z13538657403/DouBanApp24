@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <com.cjj.MaterialRefreshLayout
+        android:id="@+id/refresh_search_song"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:overlay="true"
+        app:wave_show="true"
+        app:wave_color="#90ffffff"
+        app:progress_colors="@array/material_colors"
+        app:wave_height_type="higher">
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/search_song_recyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+
+    </com.cjj.MaterialRefreshLayout>
+
+    <TextView
+        android:id="@+id/tv_no_song"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="16dp"
+        android:text="没有搜索到匹配的内容"
+        android:textSize="15sp"
+        android:visibility="gone"/>
+
+</FrameLayout>

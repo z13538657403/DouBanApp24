@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <com.test.zhangtao.activitytest.widget.DBToolBar
+        android:id="@+id/app_comment_toolBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:leftButtonIcon="@mipmap/back"
+        app:rightButtonText="提交"
+        app:isShowTabLayout="false"
+        app:title="@string/app_title_comment"
+        app:popupTheme="@style/Theme.AppCompat.Light"
+        android:background="?attr/colorPrimary"
+        android:minHeight="?attr/actionBarSize"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <EditText
+                android:id="@+id/write_comment_edit"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:minHeight="160dp"
+                android:hint="@string/write_app_comment"
+                android:gravity="top"
+                android:padding="@dimen/space_s"
+                android:textSize="15sp"
+                android:textColor="@color/black"
+                android:lineSpacingExtra="4dp"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/cw_bg"/>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>

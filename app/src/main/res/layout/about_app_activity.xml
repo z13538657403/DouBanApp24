@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <com.test.zhangtao.activitytest.widget.DBToolBar
+        android:id="@+id/app_function_ToolBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:leftButtonIcon="@mipmap/back"
+        app:isShowTabLayout="false"
+        app:title="功能介绍"
+        app:popupTheme="@style/Theme.AppCompat.Light"
+        android:background="?attr/colorPrimary"
+        android:minHeight="?attr/actionBarSize"/>
+
+    <android.support.v7.widget.CardView
+        android:layout_marginTop="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        app:cardElevation="6dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="17sp"
+            android:textColor="@color/black"
+            android:text="@string/app_introduction"
+            android:gravity="center"
+            android:lineSpacingExtra="4dp"
+            android:paddingTop="8dp"
+            android:paddingBottom="8dp"/>
+
+    </android.support.v7.widget.CardView>
+
+    <android.support.v7.widget.CardView
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        app:cardElevation="6dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="14sp"
+            android:textColor="@color/defaultTextColor"
+            android:text="@string/app_detail"
+            android:lineSpacingExtra="4dp"
+            android:paddingTop="8dp"
+            android:paddingLeft="6dp"
+            android:paddingRight="6dp"
+            android:paddingBottom="8dp"/>
+
+    </android.support.v7.widget.CardView>
+
+
+</LinearLayout>

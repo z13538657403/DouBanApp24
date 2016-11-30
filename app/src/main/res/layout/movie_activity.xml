@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:expandableTextView="http://schemas.android.com/apk/res-auto"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <com.test.zhangtao.activitytest.widget.DBToolBar
+        android:id="@+id/toolbar_movie"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:leftButtonIcon="@mipmap/back"
+        app:rightButtonIcon="@mipmap/share2"
+        app:isShowTabLayout="false"
+        app:title="电影详情"
+        android:background="?attr/colorPrimary"
+        android:minHeight="?attr/actionBarSize"/>
+
+
+<ScrollView
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="6dp">
+
+<LinearLayout
+    android:layout_marginTop="6dp"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="@drawable/background_card">
+
+    <com.facebook.drawee.view.SimpleDraweeView
+        android:id="@+id/movie_pic"
+        android:layout_width="90dp"
+        android:layout_height="140dp"
+        android:layout_margin="4dp"
+        android:layout_gravity="center"/>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="5dp"
+            android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/film_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="17sp"
+            android:textColor="@color/black"/>
+
+        <TextView
+            android:id="@+id/film_info"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="13sp"
+            android:lineSpacingExtra="4dp"
+            android:textColor="@color/defaultTextColor"/>
+
+         </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/background_card"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_marginLeft="13dp"
+            android:layout_marginTop="6dp"
+            android:layout_marginRight="6dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/description"
+                android:layout_width="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:textSize="17sp"
+                android:textColor="@color/black"
+                android:text="剧情简介"/>
+
+            <TextView
+                android:id="@+id/rating_sum"
+                android:layout_marginTop="8dp"
+                android:layout_marginRight="13dp"
+                android:layout_width="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:textSize="13sp"
+                android:textColor="@color/defaultTextColor"/>
+
+        </RelativeLayout>
+
+        <com.ms.square.android.expandabletextview.ExpandableTextView
+            android:id="@+id/expand_text_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            expandableTextView:maxCollapsedLines="5"
+            expandableTextView:animAlphaStart="1">
+
+            <TextView
+                android:id="@+id/expandable_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:layout_marginLeft="13dp"
+                android:layout_marginRight="13dp"
+                android:textSize="14sp"
+                android:lineSpacingExtra="4dp"
+                android:textColor="@color/defaultTextColor"/>
+
+            <ImageButton
+                android:id="@+id/expand_collapse"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center|bottom"
+                android:layout_margin="10dp"
+                android:background="@android:color/transparent"/>
+
+        </com.ms.square.android.expandabletextview.ExpandableTextView>
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/background_card"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/comment_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="13dp"
+            android:layout_marginTop="6dp"
+            android:layout_marginBottom="3dp"
+            android:textSize="17sp"
+            android:textColor="@color/black"
+            android:text="热门评论"/>
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/comment_list"
+            android:layout_marginTop="6dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="12dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginLeft="4dp"
+            android:layout_marginRight="4dp"
+            android:background="@color/bg_color"/>
+
+        <RelativeLayout
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:id="@+id/more_comment"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:clickable="true"
+                android:background="@drawable/selector_list_item"
+                android:layout_centerInParent="true"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:textSize="15sp"
+                    android:textColor="@color/black"
+                    android:text="更多评论"/>
+
+                <ImageButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="#FFFFFF"
+                    android:src="@drawable/tonext"/>
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+</LinearLayout>
+
+</ScrollView>
+
+</LinearLayout>

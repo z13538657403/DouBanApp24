@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    android:orientation="vertical">
+
+    <com.test.zhangtao.activitytest.widget.DBToolBar
+        android:id="@+id/pick_friend_toolBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:leftButtonText="关闭"
+        app:isShowTabLayout="false"
+        app:title="联系人"
+        app:popupTheme="@style/Theme.AppCompat.Light"
+        android:background="?attr/colorPrimary"
+        android:minHeight="?attr/actionBarSize"/>
+
+    <android.support.v7.widget.SearchView
+        android:id="@+id/searchView"
+        android:layout_width="match_parent"
+        android:layout_height="42dp"
+        android:layout_marginBottom="4dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginTop="8dp"
+        android:background="#C0C0C0"
+        android:focusable="false"
+        android:focusableInTouchMode="false"
+        android:textColor="@color/black"
+        app:iconifiedByDefault="false"
+        app:queryBackground="@null"
+        app:queryHint="请输入关键字"/>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <me.yokeyword.indexablerv.IndexableLayout
+            android:id="@+id/indexableLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:indexBar_background="#08000000"
+            app:indexBar_layout_width="24dp"
+            app:indexBar_textColor="@android:color/black"
+            app:indexBar_textSpace="8dp"/>
+
+        <fragment
+            android:id="@+id/search_fragment"
+            class="com.test.zhangtao.activitytest.activity.SearchFragment"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+
+        <FrameLayout
+            android:id="@+id/progress"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@android:color/white">
+
+            <ProgressBar
+                android:layout_width="56dp"
+                android:layout_height="56dp"
+                android:layout_gravity="center"/>
+
+        </FrameLayout>
+
+    </FrameLayout>
+
+</LinearLayout>
